@@ -1,0 +1,440 @@
+:root{ /* for variables */
+    --signatureColor: #343434;
+}
+*{ /* page normalization */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* google fonts start */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand{
+    font-family: 'Montserrat', sans-serif;
+}
+body, a{
+    font-family: 'Poppins', sans-serif;
+}
+/* google fonts end */
+::selection{ /* changing the colors when you highlight */
+    background: #34343455;
+    color: white;
+}
+/* start nav */
+nav .container .navbar-nav .active{
+    color: var(--signatureColor);
+    position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+nav .container .navbar-nav .active::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--signatureColor);
+}
+nav .container .navbar-brand{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--signatureColor);
+}
+nav .container .navbar-toggler{
+    outline: 1px solid #8888886f;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+    -ms-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+}
+nav .container .navbar-toggler:focus{
+    background-color: #8888886f;
+    box-shadow: none;
+}
+/* end nav */
+/* start home */
+.home{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../imgs/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.home .container .social-icons li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    width: 35px;
+    height: 35px;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ;
+    -webkit-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    -ms-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+}
+.home .container .social-icons li a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s 0.1s ;
+    -webkit-transition: color 0.3s 0.1s ;
+    -moz-transition: color 0.3s 0.1s ;
+    -ms-transition: color 0.3s 0.1s ;
+    -o-transition: color 0.3s 0.1s ;
+}
+/* end home */
+/* start about */
+.about .img{
+    background-image: url(../imgs/dots.png);
+    background-position: bottom left;
+    transform: translate(-10px,25px);
+    -webkit-transform: translate(-10px,25px);
+    -moz-transform: translate(-10px,25px);
+    -ms-transform: translate(-10px,25px);
+    -o-transform: translate(-10px,25px);
+}
+.about .img img{
+    transform:scale(1.15) translate(38px,-40px);
+    -webkit-transform:scale(1.15) translate(38px,-40px);
+    -moz-transform:scale(1.15) translate(38px,-40px);
+    -ms-transform:scale(1.15) translate(38px,-40px);
+    -o-transform:scale(1.15) translate(38px,-40px);
+}
+.about .container .buttons .btn a{
+    text-decoration: none;
+    color: var(--signatureColor);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.about .container .buttons .btn a:hover{
+    text-decoration: none;
+    color: white;
+}
+.about .container .buttons button{
+    border: 1px solid var(--signatureColor)
+}
+.about .container .buttons button .colored-btn{
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease
+}
+.about .container .buttons button .colored-btn:hover{
+    text-decoration: none;
+    color: black;
+}
+/* end about */
+/* services start */
+.title{
+    width: fit-content;
+    margin: auto;
+    background-image: url(../imgs/dots.png);
+    background-position: bottom left;
+    display: flex;
+    justify-content: center;
+    color: var(--signatureColor);
+    font-weight: 900;
+}
+.services .container .card .card-ico{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(179, 177, 177, 0.325);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.services .container .card:hover .card-ico{ /* card hover not working */
+    background-color: var(--signatureColor);
+    color: white;
+}
+/* services end */
+/* work start */
+.work .container .nav-tabs {
+    border:none;
+    color: black;
+}
+.work .nav-tabs .nav-link{
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+.work .nav-tabs .nav-link.active{
+    position: relative;
+    /* overflow: hidden; */
+}
+.work .nav-tabs .nav-link.active::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    right: 0;
+    height: 1px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.work .container .inner .img-cover{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background-color: rgb(255, 255, 255,1);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+}
+.work .container .inner .img-cover h6{
+    opacity: 0;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ;
+    -moz-transition: all 0.5s ;
+    -ms-transition: all 0.5s ;
+    -o-transition: all 0.5s ;
+}
+.work .container .social-icons li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.work .container .social-icons li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+.work .container .social-icons li:hover{
+    background-color: white;
+}
+.work .container .social-icons li:hover a{
+    color: black;
+}
+.work .container .inner:hover .img-cover{
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+.work .container .inner:hover h6{
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+/* work end */
+/* client start */
+.client .container .carousel .carousel-item img{
+    width: 100px;
+    height: 100px;
+}
+.client .container .carousel{
+    position: relative;
+}
+.client .container .carousel .carousel-indicators{
+    position: absolute;
+    bottom: -50px;
+}
+.client .container .carousel .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* client end */
+/* team start */
+.team .container .card .card-img .img-cover{
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transform: rotateY(180deg) scale(0.5);
+    -webkit-transform: rotateY(180deg) scale(0.5);
+    -moz-transform: rotateY(180deg) scale(0.5);
+    -ms-transform: rotateY(180deg) scale(0.5);
+    -o-transform: rotateY(180deg) scale(0.5);
+}
+.team .container .social-icons li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.team .container .social-icons li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+.team .container .social-icons li:hover{
+    background-color: white;
+}
+.team .container .social-icons li:hover a{
+    color: black;
+}
+.team .container .card .card-img img{
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.team .container .card .card-img:hover img{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.team .container .card .card-img:hover .img-cover{
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    -webkit-transform: rotateY(0deg) scale(1);
+    -moz-transform: rotateY(0deg) scale(1);
+    -ms-transform: rotateY(0deg) scale(1);
+    -o-transform: rotateY(0deg) scale(1);
+}
+/* team end */
+/* contact start */
+.contact .container .card .icon{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(227, 227, 227, 0.559);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.contact .container .card:hover .icon{
+    color: white;
+    background-color: black;
+}
+.contact .container form input, .contact .container form textarea{
+    background-color: #F4F4F4;
+}
+.contact .container form textarea{
+    min-height: 50px;
+    max-height: 250px;
+}
+.contact .container form input:focus,
+.contact .container form textarea:focus{
+    box-shadow: none;
+}
+.contact .container form button{
+    color: white;
+    background-color: var(--signatureColor);
+    border: 1px solid var(--signatureColor);
+    padding: 8px 40px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.contact .container form button:hover{
+    color: var(--signatureColor);
+    background-color: white;
+    outline: 1px solid white;
+}
+/* contact end */
+/* footer start */
+.footer{
+    background-color: #1C1C1C;
+}
+/* footer end */
